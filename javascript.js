@@ -42,7 +42,9 @@ clear.addEventListener("click", () => {
 
 const numbers = document.querySelectorAll(".number")
 numbers.forEach((element) => element.addEventListener("click", () => {
+    
     display.textContent = display.textContent + element.textContent
+    
 }))
 
 const display = document.querySelector(".display")
@@ -59,7 +61,7 @@ let equation = ''
 const operators = document.querySelectorAll(".operator")
 operators.forEach((element) => element.addEventListener("click", () => {
     firstNumber = parseInt(display.textContent)
-    display.textContent =''
+    
     equation = `${element.textContent}`
     console.log(equation)
     console.log(firstNumber)
