@@ -38,11 +38,21 @@ let firstNumber = 0
 let SecondNumber = 0
 
 
+
 const clear = document.querySelector(".clear")
 clear.addEventListener("click", () => {
     display.textContent = ""
     firstNumber = 0
     SecondNumber = 0
+})
+
+window.addEventListener("keydown", (e) => {
+    
+    if(e.key === "Backspace"){
+    display.textContent = ""
+    firstNumber = 0
+    SecondNumber = 0
+    }
 })
 
 const numbers = document.querySelectorAll(".number")
