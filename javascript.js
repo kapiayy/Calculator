@@ -36,6 +36,8 @@ function operate(x,y,operator){
 const clear = document.querySelector(".clear")
 clear.addEventListener("click", () => {
     display.textContent = ""
+    firstNumber = 0
+    SecondNumber = 0
 })
 
 const numbers = document.querySelectorAll(".number")
@@ -56,6 +58,7 @@ let equation = ''
 
 const operators = document.querySelectorAll(".operator")
 operators.forEach((element) => element.addEventListener("click", () => {
+    firstNumber = parseInt(display.textContent)
     display.textContent =''
     equation = `${element.textContent}`
     console.log(equation)
@@ -63,10 +66,10 @@ operators.forEach((element) => element.addEventListener("click", () => {
     console.log(SecondNumber)
 }))
 
-numbers.forEach((element) => element.addEventListener("click", () => {
+/*numbers.forEach((element) => element.addEventListener("click", () => {
     firstNumber = parseInt(display.textContent)
     console.log(firstNumber)
-}))
+}))*/
 
 
 console.log(equation)
@@ -74,7 +77,14 @@ const result = document.querySelector(".result")
 
 result.addEventListener("click", () => {
     SecondNumber = parseInt(display.textContent)
+    if(equation === `/`  && SecondNumber == 0){
+        display.textContent = 'lmao'
+        return
+    }
     console.log(firstNumber,SecondNumber,equation)
     console.log(operate(firstNumber,SecondNumber,equation))
     display.textContent = operate(firstNumber,SecondNumber,equation)
+    
 })
+
+

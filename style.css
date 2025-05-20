@@ -5,10 +5,13 @@
 }
 
 html,body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
     height: 100%;
     margin: 0px;
-    background-color: rgb(192, 192, 192);
+    background-color: rgb(41, 41, 41);
 }
 .numbers{
     display: flex;
@@ -16,30 +19,30 @@ html,body{
     justify-content: center;
     max-width: 300px;
     flex-wrap: wrap;
+    
 }
 .calculator{
-    height: 100%;
-    width: 100%;
-    margin: auto;
     display: flex;
-    text-align: center;
+    border: 8px solid black;
+    border-radius: 32px;
+    height: 600px;
+    width: 400px;
+    display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     
 }
 button{
-    width: 50px;
-    height: 50px;
+    
+    width: 40px;
+    height: 40px;
     padding: 20px;
     align-items: center;
     text-align: center;
-
 }
-button.number {
-    
-}
-.operators{
+.operators {
+   
     display: flex;
     align-items:center;
     flex-wrap: wrap;
@@ -50,12 +53,16 @@ button.number {
     background-color: skyblue;
     border-radius: 32px;
     padding: 16px;
-    width: 200px;
+    width: 250px;
     height: 16px;
+    margin-bottom: 64px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .buttons{
     display: flex;
-    
 }
 .clear{
     font-weight: bold;
